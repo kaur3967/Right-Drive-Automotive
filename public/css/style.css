@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+header {
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+main {
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+h3 {
+    margin-top: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+small {
+    display: block;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 30px;
+    width: 100%;
+    padding: 14px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.error-box {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.complaint-card {
+    margin-top: 25px;
+    padding: 25px;
+    background: #f9fafb;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.complaint-card h4 {
+    margin-top: 25px;
+    color: #374151;
+}
+
+.complaint-image {
+    width: 250px;
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.review-date {
+    margin-top: 25px;
+    padding: 15px;
+    background: #e0f2fe;
+    border-radius: 6px;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 20px;
+    background: #374151;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.file-help {
+    font-size: 14px;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    main {
+        padding: 15px;
+    }
+}

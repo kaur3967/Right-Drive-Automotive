@@ -1,0 +1,103 @@
+<div class="container success-page">
+
+    <h2>Complaint Submitted Successfully!</h2>
+
+    <p>
+        Thank you for contacting Right Drive Automotive.
+        Your complaint has been received.
+    </p>
+
+
+    <div class="complaint-card">
+
+        <h3>Complaint Details</h3>
+
+        <h4>Customer Information</h4>
+
+        <p>
+            <strong>Full Name:</strong>
+            {{complaint.fullName}}
+        </p>
+
+        <p>
+            <strong>Email:</strong>
+            {{complaint.email}}
+        </p>
+
+        <p>
+            <strong>Phone:</strong>
+            {{complaint.phone}}
+        </p>
+
+
+        <h4>Vehicle Information</h4>
+
+        <p>
+            <strong>Make:</strong>
+            {{complaint.vehicleMake}}
+        </p>
+
+        <p>
+            <strong>Model:</strong>
+            {{complaint.vehicleModel}}
+        </p>
+
+        <p>
+            <strong>VIN:</strong>
+            {{complaint.vin}}
+        </p>
+
+
+        <h4>Complaint</h4>
+
+        <p>
+            <strong>Subject:</strong>
+            {{complaint.subject}}
+        </p>
+
+        <p>
+            <strong>Description:</strong>
+            {{complaint.description}}
+        </p>
+
+
+        {{#if complaint.image}}
+
+            <h4>Uploaded Image</h4>
+
+            <a
+                href="{{complaint.image}}"
+                target="_blank"
+            >
+                <img
+                    src="{{complaint.image}}"
+                    alt="Uploaded complaint"
+                    class="complaint-image"
+                >
+            </a>
+
+        {{else}}
+
+            <p>No image was uploaded.</p>
+
+        {{/if}}
+
+
+        <div class="review-date">
+
+            <strong>
+                Expected Review Date:
+            </strong>
+
+            {{reviewDate}}
+
+        </div>
+
+    </div>
+
+
+    <a href="/" class="back-button">
+        Submit Another Complaint
+    </a>
+
+</div>

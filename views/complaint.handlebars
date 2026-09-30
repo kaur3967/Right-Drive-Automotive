@@ -1,0 +1,193 @@
+<div class="container">
+
+    <h2>Submit a Vehicle Complaint</h2>
+
+    <p>
+        Please provide the information below so our team
+        can review your complaint.
+    </p>
+
+    {{#if errors}}
+
+        <div class="error-box">
+
+            <h3>Please fix the following errors:</h3>
+
+            <ul>
+                {{#each errors}}
+                    <li>{{this.msg}}</li>
+                {{/each}}
+            </ul>
+
+        </div>
+
+    {{/if}}
+
+    <form
+        action="/complaint"
+        method="POST"
+        enctype="multipart/form-data"
+        id="complaintForm"
+    >
+
+        <!-- Customer Information -->
+
+        <h3>Customer Information</h3>
+
+        <label for="fullName">
+            Full Name
+        </label>
+
+        <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            value="{{formData.fullName}}"
+            required
+        >
+
+        <small id="fullNameError"></small>
+
+
+        <label for="email">
+            Email Address
+        </label>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            value="{{formData.email}}"
+            required
+        >
+
+        <small id="emailError"></small>
+
+
+        <label for="phone">
+            Phone Number
+        </label>
+
+        <input
+            type="tel"
+            id="phone"
+            name="phone"
+            value="{{formData.phone}}"
+            required
+        >
+
+        <small id="phoneError"></small>
+
+
+        <!-- Vehicle Information -->
+
+        <h3>Vehicle Information</h3>
+
+        <label for="vehicleMake">
+            Vehicle Make
+        </label>
+
+        <input
+            type="text"
+            id="vehicleMake"
+            name="vehicleMake"
+            value="{{formData.vehicleMake}}"
+            placeholder="e.g. Toyota"
+            required
+        >
+
+        <small id="vehicleMakeError"></small>
+
+
+        <label for="vehicleModel">
+            Vehicle Model
+        </label>
+
+        <input
+            type="text"
+            id="vehicleModel"
+            name="vehicleModel"
+            value="{{formData.vehicleModel}}"
+            placeholder="e.g. Camry"
+            required
+        >
+
+
+        <label for="vin">
+            VIN
+        </label>
+
+        <input
+            type="text"
+            id="vin"
+            name="vin"
+            value="{{formData.vin}}"
+            maxlength="17"
+            placeholder="Vehicle Identification Number"
+            required
+        >
+
+
+        <!-- Complaint Details -->
+
+        <h3>Complaint Details</h3>
+
+        <label for="subject">
+            Subject
+        </label>
+
+        <input
+            type="text"
+            id="subject"
+            name="subject"
+            value="{{formData.subject}}"
+            placeholder="Short description of the issue"
+            required
+        >
+
+
+        <label for="description">
+            Detailed Description
+        </label>
+
+        <textarea
+            id="description"
+            name="description"
+            rows="6"
+            placeholder="Please describe your complaint..."
+            required
+        >{{formData.description}}</textarea>
+
+        <small id="descriptionError"></small>
+
+
+        <!-- File Upload -->
+
+        <h3>Upload Image</h3>
+
+        <label for="complaintImage">
+            Vehicle/Complaint Image
+        </label>
+
+        <input
+            type="file"
+            id="complaintImage"
+            name="complaintImage"
+            accept=".jpg,.jpeg,.png"
+        >
+
+        <p class="file-help">
+            Accepted formats: JPG, JPEG and PNG.
+            Maximum size: 5 MB.
+        </p>
+
+
+        <button type="submit">
+            Submit Complaint
+        </button>
+
+    </form>
+
+</div>
+
+<script src="/js/validation.js"></script>
